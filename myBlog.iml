@@ -14,6 +14,16 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map>
+          <unit-entry name="a.xml" value="a24883b9-cc15-478e-991d-b09d201b207a" />
+          <unit-entry name="hibernate.cfg.xml" />
+        </datasource-map>
+        <naming-strategy-map />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6">
     <output url="file://$MODULE_DIR$/target/classes" />
@@ -22,8 +32,15 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/blogapp/build" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/blogapp/config" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/blogapp/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/blogapp/src" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/blogapp/static" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
+    <content url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/blogapp/dist" />
+    <content url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/blogapp/node_modules" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: junit:junit:4.11" level="project" />
@@ -67,5 +84,6 @@
     <orderEntry type="library" name="Maven: com.dyuproject.protostuff:protostuff-runtime:1.0.8" level="project" />
     <orderEntry type="library" name="Maven: com.dyuproject.protostuff:protostuff-collectionschema:1.0.8" level="project" />
     <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2" level="project" />
+    <orderEntry type="library" name="Hibernate 5.2.12-5.2.12" level="project" />
   </component>
 </module>
