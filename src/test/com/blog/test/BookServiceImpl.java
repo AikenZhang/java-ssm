@@ -12,7 +12,7 @@ public class BookServiceImpl {
 
     @Test
     public void getBook() throws Exception {
-        Book a=bookService.getById(1003);
-        System.out.println(a);
+//        Book a=bookService.getById(1003);
+//        System.out.println(a);
     }
 }

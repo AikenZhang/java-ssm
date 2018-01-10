@@ -13,9 +13,9 @@ public class BookDaoTest extends BaseTest {
 
     @Test
     public void testQueryById() throws Exception {
-        int id = 1003;
-        Book book = bookDao.queryById(id);
-        System.out.println(book);
+//        int id = 1003;
+//        Book book = bookDao.queryById(id);
+//        System.out.println(book);
     }
 
     @Test

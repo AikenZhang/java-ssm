@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import com.blog.model.table.Book;
+import com.blog.model.dto.Result;
 import java.util.List;
 @Controller
 public class indexController
@@ -28,8 +29,9 @@ public class indexController
 
     @RequestMapping(value = {"/getbook"},method = {RequestMethod.GET})
     @ResponseBody
-    public Book getName(){
-        return bookService.getById(1003);
+    public Result<List<Book>> getName(){
+        Result<List<Book>> result=new Result<List<Book>>(true,bookService.getById(1003));
+        return result;
     }
 }
 

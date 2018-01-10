@@ -4,6 +4,7 @@ import com.blog.dao.BookDao;
 import com.blog.model.table.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.List;
 public interface BookService {
 
     /**
@@ -12,7 +13,7 @@ public interface BookService {
      * @param bookId
      * @return
      */
-    Book getById(int bookId);
+    List<Book> getById(int bookId);
 
 
 }

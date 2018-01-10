@@ -13,7 +13,7 @@ public interface BookDao {
      * @param id
      * @return
      */
-    Book queryById(int id);
+    List<Book> queryById(int id);
 
     /**
      * 查询所有图书
