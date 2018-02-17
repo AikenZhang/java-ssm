@@ -11,7 +11,7 @@ import com.blog.model.enums.CodeEnum;
 import java.util.List;
 public class Result<T> {
     //状态码
-    private String code;
+    private int Code;
     //是否成功
     private boolean success;
     //成功时返回的数据
@@ -24,7 +24,7 @@ public class Result<T> {
     }
     public Result(boolean success, T result){
         if(success){
-            this.code=CodeEnum.SUCCESS.getIndex();
+            this.Code=CodeEnum.SUCCESS.getIndex();
         }
         this.success=success;
         this.result=result;
@@ -58,11 +58,11 @@ public class Result<T> {
         this.error = error;
     }
 
-    public String getCode() {
-        return code;
+    public int getCode() {
+        return Code;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setCode(int code) {
+        this.Code = code;
     }
 }

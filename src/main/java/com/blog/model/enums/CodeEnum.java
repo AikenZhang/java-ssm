@@ -6,10 +6,10 @@ package com.blog.model.enums;
  * @date 2018/1/9
  */
 public enum  CodeEnum  {
-    SUCCESS("成功","200"),ERROR("访问失败","201"),LOGIN("登录成功","100"),LOGINOUT("退出登录","101");
+    SUCCESS("成功",200),ERROR("访问失败",201),LOGIN("登录成功",100),LOGINOUT("退出登录",101);
     private String name;
-    private String index;
-    CodeEnum(String name,String index){
+    private int index;
+    CodeEnum(String name,int index){
         this.name=name;
         this.index=index;
     }
@@ -21,11 +21,11 @@ public enum  CodeEnum  {
         this.name = name;
     }
 
-    public String getIndex() {
+    public int getIndex() {
         return index;
     }
 
-    public void setIndex(String index) {
+    public void setIndex(int index) {
         this.index = index;
     }
 }

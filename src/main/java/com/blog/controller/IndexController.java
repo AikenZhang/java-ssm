@@ -11,7 +11,7 @@ import com.blog.model.table.Book;
 import com.blog.model.dto.Result;
 import java.util.List;
 @Controller
-public class indexController
+public class IndexController
 {
    @Autowired
    private BookService bookService;
@@ -27,7 +27,7 @@ public class indexController
         return new ModelAndView("index");
     }
 
-    @RequestMapping(value = {"/getbook"},method = {RequestMethod.GET})
+    @RequestMapping(value = {"/getbook"},method = {RequestMethod.POST})
     @ResponseBody
     public Result<List<Book>> getName(){
         Result<List<Book>> result=new Result<List<Book>>(true,bookService.getById(1003));
