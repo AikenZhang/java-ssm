@@ -50,6 +50,7 @@
             </props>
         </property>
     </bean>
+    <bean id="exceptionHandler" class="com.blog.common.CustomExceptionResolver" />
     <!--jackson-->
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
         <property name="messageConverters">

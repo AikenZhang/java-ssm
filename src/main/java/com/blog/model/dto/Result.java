@@ -18,6 +18,8 @@ public class Result<T> {
     private T result;
     //错误信息
     public String error;
+    public Result(){
+    };
     public Result(boolean success){
         this.success=success;
         this.error="系统发生错误";
@@ -64,5 +66,15 @@ public class Result<T> {
 
     public void setCode(int code) {
         this.Code = code;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"Code\":" + Code +
+                ",\"success\":" + success +
+                ",\"result\":" + result +
+                ",\"error\":" + "\""+error+"\"" +
+                "}";
     }
 }
