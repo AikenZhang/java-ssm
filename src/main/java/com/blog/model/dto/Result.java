@@ -11,14 +11,19 @@ import com.blog.model.enums.CodeEnum;
 import java.util.List;
 public class Result<T> {
     //状态码
-    private int Code;
+    private int Code =0;
     //是否成功
-    private boolean success;
+    private boolean success =false;
     //成功时返回的数据
     private T result;
     //错误信息
-    public String error;
+    private String error;
+    private int totalCount;
+
+
+
     public Result(){
+
     };
     public Result(boolean success){
         this.success=success;
@@ -67,7 +72,13 @@ public class Result<T> {
     public void setCode(int code) {
         this.Code = code;
     }
+    public int getTotalCount() {
+        return totalCount;
+    }
 
+    public void setTotalCount(int totalCount) {
+        this.totalCount = totalCount;
+    }
     @Override
     public String toString() {
         return "{" +

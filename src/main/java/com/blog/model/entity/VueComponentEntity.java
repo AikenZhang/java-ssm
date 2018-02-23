@@ -14,8 +14,6 @@ public class VueComponentEntity {
     private String comId;
     private String comName;
     private String vueDescription;
-    private String vueUsage;
-    private String vueCode;
 
     @Id
     @Column(name = "id")
@@ -57,26 +55,6 @@ public class VueComponentEntity {
         this.vueDescription = vueDescription;
     }
 
-    @Basic
-    @Column(name = "vue_usage")
-    public String getVueUsage() {
-        return vueUsage;
-    }
-
-    public void setVueUsage(String vueUsage) {
-        this.vueUsage = vueUsage;
-    }
-
-    @Basic
-    @Column(name = "vue_code")
-    public String getVueCode() {
-        return vueCode;
-    }
-
-    public void setVueCode(String vueCode) {
-        this.vueCode = vueCode;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -89,9 +67,6 @@ public class VueComponentEntity {
         if (comName != null ? !comName.equals(that.comName) : that.comName != null) return false;
         if (vueDescription != null ? !vueDescription.equals(that.vueDescription) : that.vueDescription != null)
             return false;
-        if (vueUsage != null ? !vueUsage.equals(that.vueUsage) : that.vueUsage != null) return false;
-        if (vueCode != null ? !vueCode.equals(that.vueCode) : that.vueCode != null) return false;
-
         return true;
     }
 
@@ -101,8 +76,6 @@ public class VueComponentEntity {
         result = 31 * result + (comId != null ? comId.hashCode() : 0);
         result = 31 * result + (comName != null ? comName.hashCode() : 0);
         result = 31 * result + (vueDescription != null ? vueDescription.hashCode() : 0);
-        result = 31 * result + (vueUsage != null ? vueUsage.hashCode() : 0);
-        result = 31 * result + (vueCode != null ? vueCode.hashCode() : 0);
         return result;
     }
 }

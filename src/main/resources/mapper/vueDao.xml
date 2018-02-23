@@ -5,12 +5,24 @@
 <mapper namespace="com.blog.dao.VueDao">
     <insert id="insertVue" parameterType="com.blog.model.entity.VueComponentEntity">
         INSERT
-        into vue_component(com_id)
-        VALUES (#{vue.comId})
+        into vue_component(com_id, com_name, vue_description)
+        VALUES (#{vue.comId},#{vue.comName},#{vue.vueDescription})
     </insert>
-    <!--<insert id="insertVue" parameterType="String">-->
-        <!--INSERT-->
-        <!--into vue_component(com_id)-->
-        <!--VALUES ()-->
-    <!--</insert>-->
+    <insert id="insertVueBut" parameterType="com.blog.model.entity.VueListEntity">
+        INSERT INTO
+        vue_list(com_id, vue_but, vue_js)
+        VALUES (#{vueL.comId},#{vueL.vueBut},#{vueL.vueJs})
+    </insert>
+    <select id="selectVue" parameterType="com.blog.model.dto.vue.VueParams" resultType="com.blog.model.entity.VueComponentEntity">
+        SELECT * FROM vue_component AS vcom
+        <where>
+            <if test="params.comName!=null and params.comName!=''">
+                vcom.com_name like #{params.comName}"%"
+            </if>
+        </where>
+        <include refid="com.blog.dao.common.pageResult"><property name="params" value="#{params}"/></include>
+    </select>
+     <select id="getCount" parameterType="String" resultType="int">
+         SELECT count(*) FROM vue_component
+     </select>
 </mapper>
